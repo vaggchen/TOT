@@ -18,5 +18,26 @@
 
 > 更新
 
-- 搭建了maven目录，正在测试当中
+- 搭建了maven目录，spring + spring mvc测试未发现异常,mybatis未配置
 - 使用eclipse + maven 3.5.0 插件（非eclipse自带）
+
+> 开发环境
+- eclipse neon
+- maven 3.5.0(下载apache官方的maven插件,在添加到eclipse,书中不建议用eclipse自带的插件,版本问题)
+- jdk 1.8
+- git bash
+- tomcat 9
+
+> eclipse maven项目导入方式
+- 以下仅代表个人观点,不代表标准步骤,请思考之
+### 将项目导入eclipse
+1. 在eclipse中选择windows--show view--other,选择git
+2. 选择git  repository   选择添加存在的仓库,把你的本地仓库加进去(应该是添加TOT目录??)
+3. 选中仓库,右键 导入 项目,默认该是maven,因为有其他配置文件的存在
+### eclipse项目属性配置
+1. 配置eclipse的installed jres为jdk1.8中的版本,不要使用单独的jre
+2. 配置项目属性的build path: main/java main/resource  test/java  test/resource
+3. 配置java compiler版本1.8
+4. project facets 中:添加 tomacat9, dynamic web module默认3.1, java版本1.8 javascript1.0版本
+5. 其它视情况而定
+      # 以上
